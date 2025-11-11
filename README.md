@@ -114,6 +114,15 @@ We use a small 2D CNN for slice-level tumour presence.
 ### Attacks
 We run over how all attacks are implemented in this next section. Note all attacks can be untargeted or targeted and can use masks.
 
+Note on targeted variants
+- The base equations below are untargeted (push away from the true label y).
+- To make any attack targeted to class t:
+  1) Replace y with t in the loss, i.e. use L(f(x), t).
+  2) Reverse the update direction (use a minus sign on the gradient step).
+ 
+Masks
+- If using a mask M, multiply the update by M before clamping (for AdvGAN, apply M to G(x)).
+
 #### FGSM 
 Fast Gradient Sign Method (FGSM) makes a one-step change in the direction that increases loss.
 
