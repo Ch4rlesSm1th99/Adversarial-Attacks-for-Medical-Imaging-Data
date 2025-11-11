@@ -1,0 +1,6 @@
+numpy>=1.23
+nibabel>=5.1
+scikit-image>=0.21
+matplotlib>=3.7
+tqdm>=4.66
+kaggle>=1.6.6

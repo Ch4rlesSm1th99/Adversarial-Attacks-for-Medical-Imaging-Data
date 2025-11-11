@@ -1,12 +1,98 @@
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Python / build ---
 __pycache__/
 *.py[cod]
+*$py.class
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+
+# --- Environments ---
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# --- IDEs ---
 .idea/
+.vscode/
 
-data/
-plots/
-models/
-
+# --- Logs  ---
 logs/
+runs/
+wandb/
+mlruns/
+lightning_logs/
+events.out.tfevents*
 
-*.h5
+# --- DATA  ---
+data/
+!data/processed/
+data/processed/*
+!data/processed/splits.json
+!data/processed/meta.json
+!data/.gitkeep
+!data/processed/.gitkeep
+
+# Safety:
+*.nii
+*.nii.gz
+
+# --- RESULTS  ---
+results/
+!results/figures/
+!results/figures/*.png
+!results/figures/*.jpg
+!results/figures/*.jpeg
+!results/figures/*.svg
+!results/figures/*.gif
+
+# --- Model artifacts / big files ---
+*.pt
 *.pth
+*.ckpt
+*.onnx
+*.h5
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# --- Legacy top-level dirs  ---
+models/
+plots/
+
+# Local configs and secrets
+configs/*.local.yaml
+configs/local/
+configs/dataset.yaml
+
+# Build outputs and caches
+results/
+wandb/
+logs/
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.npy
+*.h5
+*.jsonl
+
+
+__pycache__/
+*.pyc
+.venv/
+
+# --- Secrets  ---
+kaggle.json

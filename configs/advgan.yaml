@@ -1,0 +1,17 @@
+data_root: /home/charl/data/brats2021/cache_npz
+baseline_ckpt: results/baseline/tinycnn.pt
+
+batch: 16
+workers: 4
+
+# training schedule
+epochs: 1
+steps_per_epoch: 200  # small for quick runs
+
+# attack hyperparams
+eps: 0.0156862745      # 4/255
+lam_attack: 1.0
+lam_adv: 0.5
+lam_pert: 10.0
+lrG: 0.0002
+lrD: 0.0004
