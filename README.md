@@ -4,7 +4,7 @@
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
 
 ## TL;DR
-This repo focuses on generating new adversarial examples for MRI, not just replaying the classics. We train a lightweight 2D CNN for tumour presence on BraTS 2021, then use an AdvGAN attacker to *generate* fresh, localized perturbations under realistic constraints (e.g., tumour or ring masks, shape-controlled patches). We compare against strong white-box baselines (FGSM, BIM, PGD) and report attack success, robust accuracy, norms, SSIM, and clean-vs-adv-vs-diff grids. The aim: make it easy to explore adversarial behaviours beyond textbook gradients and actually see where the model breaks.
+This repo focuses on generating new adversarial examples for MRI, not just replaying the classics. We train a lightweight 2D CNN for tumour presence on BraTS 2021, then use an AdvGAN attacker to *generate* fresh, localized perturbations under realistic constraints (e.g., tumour or ring masks, shape-controlled patches). The aim: make it easy to explore adversarial behaviours beyond textbook gradients and actually see where the model breaks.
 
 
 ## Contents
